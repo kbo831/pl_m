@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* --갤럭시 s 기준 360 640 화면사이즈 --*/
+ * { margin: 0; padding: 0; }
+body,html { width: 100%; -webkit-text-size-adjust: none; }
+/*-webkit-text-size-adjust: none; 폰트 사이즈 자동 조절 방지(텍스트를 볼 때 편하게 볼 수 있게 자동 변환) 또는 100% 사용, 모든 디바이스에서 동일하게 보여줌*/
+ul{list-style: none}
+a{text-decoration: none; color:#333333}
+input,image,button{outline:0; border:0;user-select: none;}
+
+.wrap{ width: 100vw;height:100vh;}
+
+/*header*/
+.hd,.fix_menu .fix_hd{ width: 100%; height: 60px; background:#196fda }
+.hd a.logo{ display: block; width: 163px; height:32px; float: left; margin-top: 14px; margin-left: 15px }
+.hd .tog_menu{ float:right; width: 60px; height: 50px; margin-top: 12px; position:relative}
+.hd .tog_menu span{ display: block; width: 70%; height: 7px; background: #fff; position:absolute; left:9px;text-indent: -99999px;border-radius: 3px}
+.hd .tog_menu .bar2{ top:15px}
+.hd .tog_menu .bar3{ top:30px}
+/*fix 메뉴*/
+.fix_menu{ position:fixed;top: 0;left: 0;width: 100%; height:100%}
+.fix_menu .fix_hd a.fix_logo{ display: block; width: 163px; height:32px; float: left; margin-top: 14px; margin-left: 85px;}
+.fix_menu .fix_hd .cl_btn{ float:right; width: 50px; height: 50px;margin-top: 2px; position:relative;}
+.fix_menu .fix_hd .cl_btn span{display: block; width: 30px; height:7px;background:#fff; position:absolute; transition:0.6s; -webkit-transition:0.6s; -o-transition:0.6s; -ms-transition:0.6s;top: 50%; right:10px; text-indent: -9999px; border-radius: 3px}
+.fix_menu .fix_hd .cl_btn .bar1{transform: rotate(45deg)}
+.fix_menu .fix_hd .cl_btn .bar2{transform: rotate(-45deg)}
+
+/*menu리스트*/
+.fix_menu .fix_ul{width: 360px; position:relative;}
+.fix_menu .fix_ul > li{ width: 40%; text-align: center; }
+.fix_menu .fix_ul > li.on{background: #ececec;}
+
+.fix_menu .fix_ul .dep1{ display: block; width: 100%;  height: 83px; line-height: 80px;border-bottom: 1px solid #dddddd; border-right:1px solid #dddddd;font-weight: 700; box-sizing: border-box;}
+
+.fix_menu .fix_ul .sub{ position:absolute; top: 0px; left:144px; width: 60%; height:580px; background: #fff; display: none;background: #ececec;}
+.fix_menu .fix_ul .sub a.dep2{ display: block; width:215px; height: 82px; line-height: 80px;font-weight: 700;}
+.fix_menu .fix_ul > li.on .sub{display: block;}
