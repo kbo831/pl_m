@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>전라북도경찰청포트폴리오</title>
@@ -131,35 +132,117 @@
                 </li>
             </ul>
             <script>
-            $(document).ready(function(){
-                $(".tog_menu").click(function(){
-                   $(".fix_menu").fadeIn(); 
+                $(document).ready(function() {
+                    $(".tog_menu").click(function() {
+                        $(".fix_menu").fadeIn();
+                    });
+
+                    $(".cl_btn").click(function() {
+                        $(".fix_menu").fadeOut();
+                    });
+
+                    var hover_li = $(".fix_menu .fix_ul > li");
+                    //각각 호출
+                    hover_li.each(function(index) {
+
+                        $(this).click(function() {
+                            $(".fix_menu .fix_ul .sub").eq(index).fadeIn();
+
+                            hover_li.eq(0).removeClass("on");
+                            $(this).addClass("on");
+                            $(this).siblings().removeClass("on");
+
+                        });
+                    });
+
                 });
-                
-                 $(".cl_btn").click(function(){
-                    $(".fix_menu").fadeOut();
-                });
-                
-               var hover_li = $(".fix_menu .fix_ul > li");
-            //각각 호출
-               hover_li.each(function(index){
-                   
-                   $(this).click(function(){
-                    $(".fix_menu .fix_ul .sub").eq(index).fadeIn();
-                       
-                   hover_li.eq(0).removeClass("on");
-                    $(this).addClass("on");
-                    $(this).siblings().removeClass("on");
-                       
-                   }); 
-               });
-                
-               
-            });
             </script>
         </div>
         <div class="content">
+            <figure class="slide_box">
+                <ul class="slide_ul">
+                    <li class="sl1"><a href="">슬라이드1</a></li>
+                    <li class="sl2"><a href="">슬라이드2</a></li>
+                    <li class="sl3"><a href="">슬라이드3</a></li>
+                    <li class="sl4"><a href="">슬라이드4</a></li>
+                </ul>
+                <ul class="btn_lst">
+                    <li class="cir_btn btn1 on">1</li>
+                    <li class="cir_btn btn2">2</li>
+                    <li class="cir_btn btn3">3</li>
+                    <li class="cir_btn btn4">4</li>
+                </ul>
+            </figure>
+            <script>
+                $(document).ready(function() {
+                    var wd = $(".slide_ul li").width();
+                    var cnt = $(".slide_ul li").length;
 
+                    function nt() {
+                        $(".slide_ul").not(":animated").animate({
+                            "margin-left": "-wd"
+                        }, 800, function() {
+                            $(".slide_ul li").eq(0).appendTo($(".slide_ul"));
+                            $(".slide_ul").css("margin-left", "0px");
+                            //위치는 절대값으로 잡아주기   
+                            $(".btn_lst li").eq(0).appendTo($(".btn_lst"));
+                            $(".btn_lst li").removeClass("on");
+                            $(".btn_lst li").eq(0).addClass("on");
+                        });
+                    }
+                    var itv = setInterval(function() {
+                        nt();
+                    }, 4000);
+
+                    function pr() {
+                        $(".slide_ul").css("margin-left", "-wd");
+                        $(".slide_ul li").eq(cnt - 1).prependTo($(".slide_ul"));
+                        $(".slide_ul").not(":animated").animate({
+                            "margin-left": "0px"
+                        }, 800);
+                    }
+
+                    //버튼 클릭시 해당 슬라이드 나오게 하기 
+                });
+            </script>
+            <section class="of_info">
+                <h3 class="tit">자주찾는 정보</h3>
+                <div class="ico_box">
+                    <a href="" class="info_ico1">
+                        <img src="./data/m_data/m_ico/ico1.png" alt="내 사건 검색">
+                        <span class="name">사건 검색</span>
+                    </a>
+                    <a href="" class="info_ico2">
+                        <img src="./data/m_data/m_ico/ico2.png" alt="행정심판">
+                        <span class="name">행정심판</span>
+                    </a>
+                    <a href="" class="info_ico3">
+                        <img src="./data/m_data/m_ico/ico3.png" alt="실종아동찾기">
+                        <span class="name">실종아동</span>
+                    </a>
+                    <a href="" class="info_ico4">
+                        <img src="./data/m_data/m_ico/ico4.png" alt="폭력신고">
+                        <span class="name">폭력신고</span>
+                    </a>
+                </div>
+                   <div class="ico_box">
+                    <a href="" class="info_ico5">
+                        <img src="./data/m_data/m_ico/ico5.png" alt="교통정보알림이"><span class="name">교통정보</span>
+                    </a>
+                    <a href="" class="info_ico6">
+                        <img src="./data/m_data/m_ico/ico6.png" alt="운전면허조회">
+                        <span class="name">운전면허조회</span>
+                    </a>
+                    <a href="" class="info_ico7">
+                        <img src="./data/m_data/m_ico/ico7.png" alt="유실물센터">
+                        <span class="name">유실물센터</span>
+                    </a>
+                    <a href="" class="info_ico8">
+                        <img src="./data/m_data/m_ico/ico8.png" alt="무인단속카메라">
+                        <span class="name">무인단속<br>카메라</span>
+                    </a>
+                </div>
+            </section>
         </div>
         <footer class="ft">
 

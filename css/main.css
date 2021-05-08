@@ -2,7 +2,7 @@
 
 /* --갤럭시 s 기준 360 640 화면사이즈 --*/
  * { margin: 0; padding: 0; }
-body,html { width: 100%; -webkit-text-size-adjust: none; }
+body,html { width: 100%; -webkit-text-size-adjust: none; overflow-x: hidden }
 /*-webkit-text-size-adjust: none; 폰트 사이즈 자동 조절 방지(텍스트를 볼 때 편하게 볼 수 있게 자동 변환) 또는 100% 사용, 모든 디바이스에서 동일하게 보여줌*/
 ul{list-style: none}
 a{text-decoration: none; color:#333333}
@@ -35,3 +35,31 @@ input,image,button{outline:0; border:0;user-select: none;}
 .fix_menu .fix_ul .sub{ position:absolute; top: 0px; left:144px; width: 60%; height:580px; background: #fff; display: none;background: #ececec;}
 .fix_menu .fix_ul .sub a.dep2{ display: block; width:215px; height: 82px; line-height: 80px;font-weight: 700;}
 .fix_menu .fix_ul > li.on .sub{display: block;}
+
+/*content*/
+.content{ width: 100%;}
+/*slide*/
+.content .slide_box{width: 100%; height: 140px;position:relative;}
+.content .slide_box .slide_ul{ width: 400%; height:140px;}
+.content .slide_box .slide_ul li{float:left; width: 25%; height: 140px;}
+.content .slide_box .slide_ul .sl1{background:pink}
+.content .slide_box .slide_ul .sl2{background:skyblue}
+.content .slide_box .slide_ul .sl3{background:violet}
+.content .slide_box .slide_ul .sl4{background:yellowgreen}
+
+
+.content .slide_box .btn_lst li{ width: 8px; height:8px; border-radius: 5px; float:left; margin: 0 5px; border:2px solid #fff; text-indent: -9999px; position:absolute; bottom:10px }
+.content .slide_box .btn_lst li.btn1{left:145px}
+.content .slide_box .btn_lst li.btn2{left:160px}
+.content .slide_box .btn_lst li.btn3{left:175px}
+.content .slide_box .btn_lst li.btn4{left:190px}
+.content .slide_box .btn_lst li.on{ background:#fff }
+
+.of_info{ width: 100%;  }
+.of_info .ico_box{ width:100%; display: flex; flex-flow: row; justify-content:space-around; align-items: center}
+.of_info .ico_box a{ display: block; width:90px; height:100px}
+
+.of_info .ico_box a img{ display: block; width: 56px; height: 56px; margin: 0 auto; border-radius: 10px;background: #ececec}
+.of_info .ico_box a:hover img{ background:#196fda}
+.of_info .ico_box a span{ text-align: center; font-size: 12px; display: block; width: 100%; height:30px;line-height: 30px}
+.of_info .ico_box a.info_ico8 span{line-height:1.6;margin-top: 5px}
