@@ -7,6 +7,8 @@ body,html { width: 100%; -webkit-text-size-adjust: none; overflow-x: hidden }
 ul{list-style: none}
 a{text-decoration: none; color:#333333}
 input,image,button{outline:0; border:0;user-select: none;}
+.clr{clear:both;}
+.clr:after{content:"";display: block;clear:both;}
 
 .wrap{ width: 100vw;height:100vh;}
 
@@ -18,7 +20,8 @@ input,image,button{outline:0; border:0;user-select: none;}
 .hd .tog_menu .bar2{ top:15px}
 .hd .tog_menu .bar3{ top:30px}
 /*fix 메뉴*/
-.fix_menu{ position:fixed;top: 0;left: 0;width: 100%; height:100%;display: none;z-index: 999;background-color: #fff}
+.fix_menu{ position:fixed;top: 0; left: -360px; width: 100%; height:100%; opacity:0; visibility:hidden; z-index:999;background-color: #fff; transition:0.6s}
+.fix_menu.active{left:0;opacity:1;visibility:visible}
 .fix_menu .fix_hd a.fix_logo{ display: block; width: 163px; height:32px; float: left; margin-top: 14px; margin-left: 85px;}
 .fix_menu .fix_hd .cl_btn{ float:right; width: 50px; height: 50px;margin-top: 2px; position:relative;}
 .fix_menu .fix_hd .cl_btn span{display: block; width: 30px; height:7px;background:#fff; position:absolute; transition:0.6s; -webkit-transition:0.6s; -o-transition:0.6s; -ms-transition:0.6s;top: 50%; right:10px; text-indent: -9999px; border-radius: 3px}
@@ -62,6 +65,16 @@ input,image,button{outline:0; border:0;user-select: none;}
 
 .of_info .ico_box a img{ display: block; width: 56px; height: 56px; margin: 0 auto; border-radius: 10px;background: #ececec}
 .of_info .ico_box a:hover img{ background:#196fda}
-.of_info .ico_box a span{ text-align: center; font-size: 12px; display: block; width: 100%; height:30px;line-height: 30px}
+.of_info .ico_box a span{ text-align: center; font-size: 12px;font-weight: 600; display: block; width: 100%; height:30px;line-height: 30px}
 .of_info .ico_box a.info_ico8 span{line-height:1.6;margin-top: 5px}
 .of_info .poli_service{ display: block; width: 80%; height: 50px; line-height: 50px; text-align: center; background-color:#196fda; margin: 0 auto; margin-top: 35px; color:#fff;border-radius: 3px}
+
+/*게시판*/
+.noti{ width: 80%; position:relative; margin: 0 auto; margin-top: 50px;}
+.noti_tit{ width: 100%; }
+.noti_tit li{ width:20%;height:40px;line-height: 40px; font-size:14px; font-weight: 600; float:left; background-color: #ececec; text-align: center;border-radius: 2px}
+.noti_tit li.it5 a { display: block; width: 100%; height: 100%;}
+.noti_tit li.on{ background-color:#196fda; color:#fff}
+.noti .noti_box{ width:285px; position:relative; }
+.noti .noti_box > div{ position:absolute; left: 0; top: 0;background-color: #fff;}
+
