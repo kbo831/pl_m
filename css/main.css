@@ -75,6 +75,13 @@ input,image,button{outline:0; border:0;user-select: none;}
 .noti_tit li{ width:20%;height:40px;line-height: 40px; font-size:14px; font-weight: 600; float:left; background-color: #ececec; text-align: center;border-radius: 2px}
 .noti_tit li.it5 a { display: block; width: 100%; height: 100%;}
 .noti_tit li.on{ background-color:#196fda; color:#fff}
-.noti .noti_box{ width:285px; position:relative; }
-.noti .noti_box > div{ position:absolute; left: 0; top: 0;background-color: #fff;}
+.noti .noti_box{ width:80%; position:relative; }
+.noti .noti_box > div{ width:288px; position:absolute; left: 0; top: 0;background-color: #fff; display: none; }
+.noti .noti_box > div.on{display: block;}
+.noti .noti_box > div .tb{ width: 100%; display: table}
+.noti .noti_box > div .tb tr{display: table-row}
+.noti .noti_box > div .tb td{display: table-cell;line-height:1.6}
 
+.noti .noti_box > div .tb td.cel1 a{ display: block; width:230px ; font-size:15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.noti .noti_box > div .tb td.cel1 a:hover{text-decoration: underline; color:blue; font-weight: 600}
+.noti .noti_box > div .tb td.cel2{ display: block; width:58px; font-size:15px;  overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
