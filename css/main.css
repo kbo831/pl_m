@@ -69,7 +69,8 @@ input,image,button{outline:0; border:0;user-select: none;}
 .of_info .ico_box a.info_ico8 span{line-height:1.6;margin-top: 5px}
 .of_info .poli_service{ display: block; width: 80%; height: 50px; line-height: 50px; text-align: center; background-color:#196fda; margin: 0 auto; margin-top: 35px; color:#fff;border-radius: 3px}
 
-/*게시판*/
+/*게시판 colgroup > col width="" 으로 전체 셀 크기 조절 가능 퍼센트 사용
+고정값은 픽셀로!*/
 .noti{ width: 80%; position:relative; margin: 0 auto; margin-top: 50px;}
 .noti_tit{ width: 100%; }
 .noti_tit li{ width:20%;height:40px;line-height: 40px; font-size:14px; font-weight: 600; float:left; background-color: #ececec; text-align: center;border-radius: 2px}
@@ -77,23 +78,23 @@ input,image,button{outline:0; border:0;user-select: none;}
 .noti_tit li.on{ background-color:#196fda; color:#fff}
 .noti .noti_box{ width:80%; min-height: 150px;
  position:relative; }
-.noti .noti_box > div{ width:288px; position:absolute; left: 0; top: 0;background-color: #fff; display: none; }
+.noti .noti_box > div{ width:100%; position:absolute; left: 0; top: 0;background-color: #fff; display: none; }
 .noti .noti_box > div.on{display: block;}
 .noti .noti_box > div .tb{ width: 100%; display: table}
 .noti .noti_box > div .tb tr{display: table-row}
 .noti .noti_box > div .tb td{display: table-cell;line-height:1.6}
 
-.noti .noti_box > div .tb td.cel1 a{ display: block; width:230px ; font-size:15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.noti .noti_box > div .tb td.cel1 a{ display: block; width:220px; font-size:15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .noti .noti_box > div .tb td.cel1 a:hover{text-decoration: underline; color:blue; font-weight: 600}
-.noti .noti_box > div .tb td.cel2{ display: block; width:58px; font-size:15px;  overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.noti .noti_box > div .tb td.cel2{ display: block; font-size:15px;  overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 /*now*/
 .now{width: 80%; margin: 0 auto}
 .now .txt{ width: 100%; height:50px; background-color: #ececec;}
 .now .txt li{float:left; height:100%}
 .now .txt li.tit{font-size:1.12em;width:80%; line-height:50px; font-weight: 600; padding-left: 10px;box-sizing: border-box}
-.now .txt li.plus{width: 20%; float:right;}
-.now .txt li.plus a.more{display: block; width: 40%; height:50px;position:relative; margin: 0px auto;}
-.now .txt li.plus a.more span{display: block; width:80%;height:5px;background-color: #196fda;position:absolute; top: 50%;}
+.now .txt li.plus{width: 20%; height:100%; float:right; }
+.now .txt li.plus a.more{display: block; width: 45%; height:100%; position:relative; margin: 0 auto; }
+.now .txt li.plus a.more span{display: block; width:21px; height:5px;background-color: #196fda;position:absolute; top: 40%; right:5%; z-index: 50}
 .now .txt li.plus a.more:hover span{background-color:#fff;}
 .now .txt li.plus a.more span.bar2{transform:rotate(90deg)}
 
@@ -110,5 +111,18 @@ input,image,button{outline:0; border:0;user-select: none;}
 .now .slide_box1 .btn_lst li.btn1{left:145px}
 .now .slide_box1 .btn_lst li.btn2{left:160px}
 .now .slide_box1 .btn_lst li.btn3{left:175px}
+
+/*police_intro*/
+.p_intro{ width: 80%; margin: 0 auto;}
+.p_intro .tit{ text-align: center; margin: 5% 0; padding: 10%; background-color: #ececec; border:1px solid #ececec; border-radius: 3px }
+.p_intro .p_lst{ width: 100%; }
+.p_intro .p_lst li{ width:48%; float:left; background-color:#196fda; border-radius: 3px}
+.p_intro .p_lst li:nth-child(odd){ margin-right: 2%}
+.p_intro .p_lst li a{ display:block; padding: 8% 0; text-align: left; position:relative}
+.p_intro .p_lst li a:before{ content:""; display: block; width:39px; height: 27px; float:left; }
+.p_intro .p_lst li.it1 a:before{ background-image:url("../data/m_data/m_ico/nt01_info.png") }
+.p_intro .p_lst li.it2 a:before{ background-image:url() }
+.p_intro .p_lst li.it3 a:before{ background-image:url("../data/m_data/m_ico/nt01_group_lst.png") }
+.p_intro .p_lst li.it4 a:before{ background-image:url() }
 
 

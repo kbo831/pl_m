@@ -380,6 +380,10 @@
                     </div>
                     <div class="clr">
                         <table class="tb">
+                            <colgroup>
+                                <col width="90%">
+                                <col width="10%">
+                            </colgroup>
                             <tbody>
                                 <tr>
                                     <td class="cel1">
@@ -461,40 +465,66 @@
                         </li>
                     </ul>
                 </figure>
-                 <script>
-                $(document).ready(function() {
-                    var wd = $(".slide_ul1 li").width();
-                    var cnt = $(".slide_ul1 li").length;
+                <script>
+                    $(document).ready(function() {
+                        var wd = $(".slide_ul1 li").width();
+                        var cnt = $(".slide_ul1 li").length;
 
-                    function nt() {
-                        $(".slide_ul1").not(":animated").animate({
-                            "margin-left": "-wd"
-                        }, 800, function() {
-                            $(".slide_ul1 li").eq(0).appendTo($(".slide_ul1"));
-                            $(".slide_ul1").css("margin-left", "0px");
-                            //위치는 절대값으로 잡아주기   
-                            $(".slide_box1 .btn_lst li").eq(0).appendTo($(".btn_lst"));
-                            $(".slide_box1 .btn_lst li").removeClass("on");
-                            $(".slide_box1 .btn_lst li").eq(0).addClass("on");
-                        });
-                    }
-                    var itv = setInterval(function() {
-                        nt();
-                    }, 4000);
+                        function nt() {
+                            $(".slide_ul1").not(":animated").animate({
+                                "margin-left": "-wd"
+                            }, 800, function() {
+                                $(".slide_ul1 li").eq(0).appendTo($(".slide_ul1"));
+                                $(".slide_ul1").css("margin-left", "0px");
+                                //위치는 절대값으로 잡아주기   
+                                $(".slide_box1 .btn_lst li").eq(0).appendTo($(".btn_lst"));
+                                $(".slide_box1 .btn_lst li").removeClass("on");
+                                $(".slide_box1 .btn_lst li").eq(0).addClass("on");
+                            });
+                        }
+                        var itv = setInterval(function() {
+                            nt();
+                        }, 4000);
 
-                    function pr() {
-                        $(".slide_ul1").css("margin-left", "-wd");
-                        $(".slide_ul1 li").eq(cnt - 1).prependTo($(".slide_ul1"));
-                        $(".slide_ul1").not(":animated").animate({
-                            "margin-left": "0px"
-                        }, 800);
-                    }
+                        function pr() {
+                            $(".slide_ul1").css("margin-left", "-wd");
+                            $(".slide_ul1 li").eq(cnt - 1).prependTo($(".slide_ul1"));
+                            $(".slide_ul1").not(":animated").animate({
+                                "margin-left": "0px"
+                            }, 800);
+                        }
 
-                    //버튼 클릭시 이전 , 정지, 다음
-                });
-            </script>
+                        //버튼 클릭시 이전 , 정지, 다음
+                    });
+                </script>
 
             </div>
+            <section class="p_intro">
+                <h3 class="tit">전라북도 경찰청</h3>
+                <ul class="p_lst clr">
+                    <li class="it1">
+                        <a href="">
+                            청사안내
+                        </a>
+                    </li>
+                    <li class="it2">
+                        <a href="">
+                           
+                            부서별 연락처
+                        </a>
+                    </li>
+                    <li class="it3">
+                        <a href="">
+                        조직도
+                        </a>
+                    </li>
+                    <li class="it4">
+                        <a href="">
+                            서비스헌장
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </div>
         <footer class="ft">
 
