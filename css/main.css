@@ -29,13 +29,13 @@ input,image,button{outline:0; border:0;user-select: none;}
 .fix_menu .fix_hd .cl_btn .bar2{transform: rotate(-45deg)}
 
 /*menu리스트*/
-.fix_menu .fix_ul{width: 360px; position:relative;}
+.fix_menu .fix_ul{width: 100%; position:relative;}
 .fix_menu .fix_ul > li{ width: 40%; text-align: center; }
 .fix_menu .fix_ul > li.on{background: #ececec;}
 
 .fix_menu .fix_ul .dep1{ display: block; width: 100%;  height: 83px; line-height: 80px;border-bottom: 1px solid #dddddd; border-right:1px solid #dddddd;font-weight: 700; box-sizing: border-box;}
 
-.fix_menu .fix_ul .sub{ position:absolute; top: 0px; left:144px; width: 60%; height:580px; background: #fff; display: none;background: #ececec;}
+.fix_menu .fix_ul .sub{ position:absolute; top: 0px; left:50%; width:calc(100% - 193px); margin-left: -10%;height:580px; background: #fff; display: none;background: #ececec;}
 .fix_menu .fix_ul .sub a.dep2{ display: block; width:215px; height: 82px; line-height: 80px;font-weight: 700;}
 .fix_menu .fix_ul > li.on .sub{display: block;}
 
@@ -50,13 +50,24 @@ input,image,button{outline:0; border:0;user-select: none;}
 .content .slide_box .slide_ul .sl3{background:violet}
 .content .slide_box .slide_ul .sl4{background:yellowgreen}
 
-
 .content .slide_box .btn_lst li{ width: 8px; height:8px; border-radius: 5px; float:left; margin: 0 5px; border:2px solid #fff; text-indent: -9999px; position:absolute; bottom:10px }
-.content .slide_box .btn_lst li.btn1{left:145px}
-.content .slide_box .btn_lst li.btn2{left:160px}
-.content .slide_box .btn_lst li.btn3{left:175px}
-.content .slide_box .btn_lst li.btn4{left:190px}
-.content .slide_box .btn_lst li.on{ background:#fff }
+.content .slide_box .btn_lst li.btn1{left:45%}
+.content .slide_box .btn_lst li.btn2{left:48%}
+.content .slide_box .btn_lst li.btn3{left:51%}
+.content .slide_box .btn_lst li.btn4{left:54%}
+
+@media screen and (max-width:1024px){
+    .content .slide_box .btn_lst li.btn1{left:45%}
+    .content .slide_box .btn_lst li.btn2{left:48%}
+    .content .slide_box .btn_lst li.btn3{left:51%}
+    .content .slide_box .btn_lst li.btn4{left:54%}
+    }
+@media screen and (max-width:540px){
+    .content .slide_box .btn_lst li.btn1{left:40%}
+    .content .slide_box .btn_lst li.btn2{left:45%}
+    .content .slide_box .btn_lst li.btn3{left:50%}
+    .content .slide_box .btn_lst li.btn4{left:55%}
+}    
 
 .of_info{ width: 100%;  }
 .of_info .tit{ line-height:5.0; text-align: center}
